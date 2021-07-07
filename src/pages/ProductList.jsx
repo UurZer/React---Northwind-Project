@@ -47,7 +47,7 @@ export default function ProductList() {
               <Table.Cell>{product.unitPrice}</Table.Cell>
               <Table.Cell>{product.unitsInStock}</Table.Cell>
               <Table.Cell>{product.quantityPerUnit}</Table.Cell>
-              <Table.Cell>{product.category.categoryName}</Table.Cell>
+              <Table.Cell>{product.category?.categoryName}</Table.Cell>
               <Table.Cell>
                 <Button primary onClick={() => handleAddToCart(product)}>
                   Sepete Ekle

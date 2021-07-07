@@ -19,7 +19,7 @@ export default function Navi() {
   }
   return (
     <div>
-      <Menu fixed="top" size="max">
+      <Menu fixed="top" >
         <Container>
           <Menu.Item as={NavLink} to="/" name="home" />
           <Menu.Item name="messages" />
