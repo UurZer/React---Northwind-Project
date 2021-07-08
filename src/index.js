@@ -8,15 +8,21 @@ import { ToastProvider } from "react-toast-notifications";
 import { Provider } from "react-redux";
 import { configureStore } from "./store/reducers/configureStore";
 import "react-toastify/dist/ReactToastify.min.css";
+import { _fetchCategories } from "./store/actions/categoryAction";
 
 const store = configureStore();
+const _init = [_fetchCategories()];
+
+_init.map((func) => {
+  return store.dispatch(func);
+});
+
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-    <ToastProvider>
-
-      <App />
-    </ToastProvider>
+      <ToastProvider>
+        <App />
+      </ToastProvider>
     </BrowserRouter>
   </Provider>,
   document.getElementById("root")

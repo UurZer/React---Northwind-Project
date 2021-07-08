@@ -27,7 +27,7 @@ export const _fetchCategories = () => {
     return async dispatch => {
         let categoryService = new CategoryService();
         dispatch(fetchCategoriesPending());
-        await categoryService.getCategories.then(response => {
+        await categoryService.getCategories().then(response => {
             dispatch(fetchCategoriesSuccess(response.data.data))
         }).catch(error => {
             dispatch(fetchCategoriesError(error.message))

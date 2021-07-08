@@ -66,6 +66,7 @@ export default function ProductAdd() {
                 <option value="" disabled hidden>
                   Kategori Seçiniz
                 </option>
+                
                 {categories.map((category) => (
                   <option
                     key={category.categoryId}
